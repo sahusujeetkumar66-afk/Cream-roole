@@ -1,1 +1,431 @@
+        }
 
+        .navbar.scrolled {
+            padding: 12px 8%;
+            box-shadow: 0 10px 30px rgba(74, 44, 42, 0.05);
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, var(--primary-brown), var(--accent-caramel));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--primary-brown);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-caramel);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-caramel);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-brown);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding-top: 140px;
+            background: radial-gradient(circle at 80% 20%, rgba(242, 193, 125, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            background-color: rgba(217, 155, 78, 0.1);
+            color: var(--accent-caramel);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 35px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Delicious Decorative Vector Art for Products */
+        .main-roll-visual {
+            width: 85%;
+            height: 400px;
+            background: linear-gradient(135deg, #F2D2A7, #D99B4E);
+            border-radius: 100px 40px 100px 40px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(74, 44, 42, 0.2);
+            transform: rotate(-5deg);
+            animation: float 6s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .main-roll-visual::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: #FFF;
+            border-radius: 50%;
+            right: -20px;
+            box-shadow: -10px 0 20px rgba(0,0,0,0.05);
+            display: flex;
+        }
+
+        .inner-cream {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFF 60%, var(--bg-cream) 100%);
+            border-radius: 50%;
+            position: absolute;
+            right: 10px;
+            box-shadow: inset 0 0 15px rgba(217, 155, 78, 0.3);
+        }
+
+        /* Floating elements animations */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-3deg); }
+            100% { transform: translateY(0px) rotate(-5deg); }
+        }
+
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .float-1 { top: 10%; left: 10%; animation: spin 8s linear infinite; font-size: 2rem; color: var(--accent-caramel); }
+        .float-2 { bottom: 15%; right: 5%; animation: floatMini 4s ease-in-out infinite; font-size: 1.5rem; color: var(--highlight-pink); }
+        .float-3 { bottom: 5%; left: 20%; animation: spin 12s linear infinite; font-size: 1.2rem; color: var(--primary-brown); }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes floatMini {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Header Layout */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        /* Product Highlight Section */
+        .product-highlight {
+            background-color: rgba(242, 193, 125, 0.05);
+        }
+
+        .highlight-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background: #fff;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .highlight-visual-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .highlight-info {
+            flex: 1.2;
+        }
+
+        .highlight-info h3 {        }
+
+        .navbar.scrolled {
+            padding: 12px 8%;
+            box-shadow: 0 10px 30px rgba(74, 44, 42, 0.05);
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, var(--primary-brown), var(--accent-caramel));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--primary-brown);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-caramel);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-caramel);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-brown);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding-top: 140px;
+            background: radial-gradient(circle at 80% 20%, rgba(242, 193, 125, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            background-color: rgba(217, 155, 78, 0.1);
+            color: var(--accent-caramel);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 35px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Delicious Decorative Vector Art for Products */
+        .main-roll-visual {
+            width: 85%;
+            height: 400px;
+            background: linear-gradient(135deg, #F2D2A7, #D99B4E);
+            border-radius: 100px 40px 100px 40px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(74, 44, 42, 0.2);
+            transform: rotate(-5deg);
+            animation: float 6s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .main-roll-visual::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: #FFF;
+            border-radius: 50%;
+            right: -20px;
+            box-shadow: -10px 0 20px rgba(0,0,0,0.05);
+            display: flex;
+        }
+
+        .inner-cream {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFF 60%, var(--bg-cream) 100%);
+            border-radius: 50%;
+            position: absolute;
+            right: 10px;
+            box-shadow: inset 0 0 15px rgba(217, 155, 78, 0.3);
+        }
+
+        /* Floating elements animations */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(-3deg); }
+            100% { transform: translateY(0px) rotate(-5deg); }
+        }
+
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .float-1 { top: 10%; left: 10%; animation: spin 8s linear infinite; font-size: 2rem; color: var(--accent-caramel); }
+        .float-2 { bottom: 15%; right: 5%; animation: floatMini 4s ease-in-out infinite; font-size: 1.5rem; color: var(--highlight-pink); }
+        .float-3 { bottom: 5%; left: 20%; animation: spin 12s linear infinite; font-size: 1.2rem; color: var(--primary-brown); }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes floatMini {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Header Layout */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        /* Product Highlight Section */
+        .product-highlight {
+            background-color: rgba(242, 193, 125, 0.05);
+        }
+
+        .highlight-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background: #fff;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .highlight-visual-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .highlight-info {
+            flex: 1.2;
+        }
+
+        .highlight-info h3 {
